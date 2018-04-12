@@ -1,4 +1,4 @@
-+ This file consists of few details regarding the code from the **_Repository Challengedip_**.
++ This file consists of few details regarding the code from the **_Repository Challenge Dip_**.
 
 + **Screenshots** are programmed to be saved on my `C:\Users\dhamilton\Desktop\Selenium project\output` with separate sub folders corresponding to each functionality on the website.
 
