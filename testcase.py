@@ -4,7 +4,7 @@ from selenium import webdriver #for selenium to run
 from selenium.webdriver.common.keys import Keys #for common functions
 from datetime import datetime #for date and time
 now = datetime.now()
-print(now.strftime("Today's is %A %d %B %Y"))
+print(now.strftime("Today's Date is %A %d %B %Y"))
 print(now.strftime("And the Time is %I:%M:%S %p"))
 
 class Login(unittest.TestCase):
