@@ -12,6 +12,6 @@
 
 * Since there are several test cases and and the **_need to save them all within the same directory_**, the following code is used for every test case that needs to save screenshot
 
-`os.path.join(Login.save_dir, 'screenshotname.png')`
+   `os.path.join(Login.save_dir, 'screenshotname.png')`
 
 * Each class has its own separete sub folder to save screenshot which can be seen within them. `os.path.join` joins the location path from `.save_dir` with `screenshot.png` so that the screenshot is saved in the location of `save_dir`
