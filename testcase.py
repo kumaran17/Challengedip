@@ -68,6 +68,29 @@ class Login(unittest.TestCase):
         self.driver.save_screenshot(os.path.join(Login.save_dir, 'correct credentials.png'))
         print('test case correct credentials')
 
+class Logout(unittest.TestCase):
+    save_dir = 'C:\\Users\\dhamilton\\Desktop\\Selenium project\\output\\logout\\'+datetime.now() .strftime("%d-%m-%Y %I-%M %p")
+    os.mkdir(save_dir)
+
+    def setUp(self):
+        self.driver = webdriver.Chrome()
+                
+    def test_b1(self): #to check the logout functionality
+        driver = self.driver
+        driver.maximize_window()
+        self.driver.get('http://www.challengedip.com')
+        element = driver.find_element_by_xpath("//*[@id='navbarResponsive']/ul/li[1]/a").click()
+        element = driver.find_element_by_id("emailaddress")
+        element.send_keys("kumarants007@gmail.com")
+        element = driver.find_element_by_id("password")
+        element.send_keys("password")
+        element = driver.find_element_by_id("login-submit").click()
+        self.driver.save_screenshot(os.path.join(Logout.save_dir, 'login.png'))
+        element = driver.find_element_by_link_text('LOGOUT').click()
+        self.driver.save_screenshot(os.path.join(Logout.save_dir, 'logout.png'))
+        print('screenshot location is')
+        print(Login.save_dir)
+        print('test check logout')
     def tearDown(self):
         self.driver.close()
 
