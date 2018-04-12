@@ -1,4 +1,4 @@
-Since I Love _Creating Software_ to **_test_** a _Software_ here i am to demonstrate my skills in **_Test Automation_** using my own Website which is even more fun to do
+I Love _Creating Software_ to **_test_** a _Software_ so here i am to demonstrate my skills in **_Test Automation_** using my own Website which is even more fun to do
 ***
 <a href="https://ibb.co/cUnXMc"><img src="https://preview.ibb.co/nFDiSH/CHALLENGEDIP.png" alt="CHALLENGEDIP" border="0"></a>
 + **Challenge Dip** is a fun website for playing **Voice Challenge** with friends. The website uses contents mostly from __Youtube__.
