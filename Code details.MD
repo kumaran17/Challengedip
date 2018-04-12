@@ -6,7 +6,7 @@
 
 `save_dir = 'C:\\Users\\dhamilton\\Desktop\\Selenium project\\output\\login\\'+datetime.now() .strftime("%d-%m-%Y %I-%M %p")`
 
-From the above line of code it can be seen that `+datetime.now()` is used to get **_current date and time_** from the system and the **_datetime format_** is specified using the code `.strftime("%d-%m-%Y %I-%M %p")` where,
+   From the above line of code it can be seen that `+datetime.now()` is used to get **_current date and time_** from the system and the **_datetime format_** is specified using the code `.strftime("%d-%m-%Y %I-%M %p")` where,
 
 + **_new directory_** is created using the code `os.mkdir(save_dir)`
 
