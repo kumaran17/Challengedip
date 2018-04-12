@@ -18,13 +18,10 @@
 
 There are 3 separate main folders to save screenshots under the main directory output
 
-No| Folder Name | new
-1 | Folder | new
-2 | Logout | folder
-3 | Contact | Folder
+~~Never mind about the below **_Table_** just created it for Fun~~
 
-No | Folder Name | new
+No | Folder Name | Active
 --- | --- | ---
-1 | Login | new
-2 | Logout | nicely
-3 | Contact | new
+1 | Login | Yes
+2 | Logout | Yes
+3 | Contact | Yes
