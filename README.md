@@ -4,5 +4,4 @@ Challengedip
 
 + This repository consists of **Automation Test Cases** for [**Challengedip**](https://challengedip.com/) created using __Selenium Webdriver__ in **Python** (version 2.7).
 
-Do take a look at our [**Website**](https://challengedip.com/) and provide your **valuable feedback** if possible
-![alt text](https://drive.google.com/file/d/1AVYHhHXU1KeiVwR6VjwjR-5Ia_oIwuX-/view?usp=sharing)
+Do take a look at our [**Website**](https://challengedip.com/) and provide your **valuable feedback** ~~if possible~~
