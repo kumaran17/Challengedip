@@ -4,7 +4,7 @@
 
 * I have made use of **_datetime module_** to save screenshots on folders with current date and time as its name. This makes it easier for reviewing output.
 
-`save_dir = 'C:\\Users\\dhamilton\\Desktop\\Selenium project\\output\\login\\'+datetime.now() .strftime("%d-%m-%Y %I-%M %p")`
+   `save_dir = 'C:\\Users\\dhamilton\\Desktop\\Selenium project\\output\\login\\'+datetime.now() .strftime("%d-%m-%Y %I-%M %p")`
 
    From the above line of code it can be seen that `+datetime.now()` is used to get **_current date and time_** from the system and the **_datetime format_** is specified using the code `.strftime("%d-%m-%Y %I-%M %p")` where,
 
