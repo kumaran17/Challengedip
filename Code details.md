@@ -1,6 +1,6 @@
 + This file consists of few details regarding the code from the **_Repository Challenge Dip_**.
 
-+ I use **_Visual Studio Code_** for writing **Test Scripts** in _Python_
++ I use **_Visual Studio Code_** for writing **Selenium Test Scripts** in _Python_
 
 + **Screenshots** are programmed to be saved on my `C:\Users\dhamilton\Desktop\Selenium project\output` with separate sub folders corresponding to each functionality on the website.
 
