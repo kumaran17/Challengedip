@@ -18,7 +18,7 @@
 
 There are 3 separate main folders to save screenshots under the main directory output
 
-No| Folder Name
-1 | Login
-2 | Logout
-3 | Contact
+No| Folder Name |  
+1 | Login |  
+2 | Logout |  
+3 | Contact |  
