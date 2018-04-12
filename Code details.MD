@@ -10,8 +10,15 @@
 
 + **_new directory_** is created using the code `os.mkdir(save_dir)`
 
-* Since there are several test cases and and the **_need to save them all within the same directory_**, the following code is used for every test case that needs to save screenshot
+* Since there are several test cases and and the **_need to save all the screenshots within the same directory_** the following code is used for every test case that needs to save screenshot
 
    `os.path.join(Login.save_dir, 'screenshotname.png')`
 
 * Each **_class_** has its own **_separete sub folder to save screenshot_** which can be seen within them. `os.path.join` joins the location path from `.save_dir` with `screenshot.png` so that the screenshot is saved in the location of `save_dir`
+
+There are 3 separate main folders to save screenshots under the main directory output
+
+No| Folder Name
+1 | Login
+2 | Logout
+3 | Contact
