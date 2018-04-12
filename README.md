@@ -1,7 +1,6 @@
 Since I Love _Creating Software_ to **_test_** a _Software_ here i am to demonstrate my skills in **_Test Automation_** using my own Website which is even more fun to do
 ***
-Challengedip
-============
+<a href="https://ibb.co/cUnXMc"><img src="https://preview.ibb.co/nFDiSH/CHALLENGEDIP.png" alt="CHALLENGEDIP" border="0"></a>
 + **Challengedip** is a fun website for playing **Voice Challenge** with friends. The website uses contents mostly from __Youtube__.
 
 + This repository consists of **Automation Test Cases** for [**Challengedip**](https://challengedip.com/) created using __Selenium Webdriver__ in **Python** (version 2.7).
