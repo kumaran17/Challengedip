@@ -94,5 +94,36 @@ class Logout(unittest.TestCase):
     def tearDown(self):
         self.driver.close()
 
+class Contact(unittest.TestCase):
+    save_dir = 'C:\\Users\\dhamilton\\Desktop\\Selenium project\\output\\contact\\'+datetime.now() .strftime("%d-%m-%Y %I-%M %p")
+    os.mkdir(save_dir)
+
+    def setUp(self):
+        self.driver = webdriver.Chrome()
+        
+    def test_c1(self): #to check the logout functionality
+        driver = self.driver
+        driver.maximize_window()
+        self.driver.get('http://www.challengedip.com')
+        element = driver.find_element_by_xpath("//*[@id='navbarResponsive']/ul/li[1]/a").click()
+        element = driver.find_element_by_id("emailaddress")
+        element.send_keys("kumarants007@gmail.com")
+        element = driver.find_element_by_id("password")
+        element.send_keys("password")
+        element = driver.find_element_by_id("login-submit").click()
+        self.driver.save_screenshot(os.path.join(Contact.save_dir, 'login.png'))
+        self.driver.find_element_by_link_text('CONTACT').click()
+        self.driver.save_screenshot(os.path.join(Contact.save_dir, 'contact.png'))
+        element = driver.find_element_by_id('firstname').send_keys("test")
+        element = driver.find_element_by_id('lastname').send_keys("user")
+        element = driver.find_element_by_id('emailaddress').send_keys("kumarants007@gmail.com")
+        element = driver.find_element_by_id('comment').send_keys("Challenge Dip Website is really a fun place to play with, keep on uploading more contents")
+        self.driver.save_screenshot(os.path.join(Contact.save_dir, 'submit form.png'))
+        element = driver.find_element_by_id('contact-submit').click()
+        self.driver.save_screenshot(os.path.join(Contact.save_dir, 'submitted form.png'))
+        print('screenshot location is')
+        print(Login.save_dir)
+        print('test case contact')
+
 if __name__ == "__main__":
     unittest.main()
