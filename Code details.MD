@@ -18,7 +18,7 @@
 
 There are 3 separate main folders to save screenshots under the main directory output
 
-~~Never mind about the below **_Table_** just created it for Fun~~
+~~Never mind about the **_Table_** below just created it for Fun~~
 
 No | Folder Name | Active
 --- | --- | ---
