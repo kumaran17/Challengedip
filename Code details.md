@@ -27,3 +27,5 @@ No | Folder Name | Active
 1 | Login | Yes
 2 | Logout | Yes
 3 | Contact | Yes
+
+> Last but not least, currently Selenium takes about 47.2 Seconds for a complete test case execution via Visual Studio Code Terminal
