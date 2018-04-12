@@ -23,7 +23,7 @@ No| Folder Name | new
 2 | Logout | folder
 3 | Contact | Folder
 
-No | Folder Name | new
+No | Name | new
 1 | Login | new
 2 | Logout | nicely
 3 | Contact | new
