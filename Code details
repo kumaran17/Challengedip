@@ -1,6 +1,6 @@
-This file consists of few details regarding the code from the repository Challengedip.
+This file consists of few details regarding the code from the **_repository Challengedip_**.
 
-Screenshots are programmed to be saved on my 'C:\Users\dhamilton\Desktop\Selenium project\output` with separate sub folders corresponding to each functionality on the website.
+**Screenshots** are programmed to be saved on my `C:\Users\dhamilton\Desktop\Selenium project\output` with separate sub folders corresponding to each functionality on the website.
 
 I have made use of datetime module to save screenshots on folders with current date and time as its name. This makes it easier for reviewing output.
 
