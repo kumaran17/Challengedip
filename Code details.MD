@@ -18,7 +18,12 @@
 
 There are 3 separate main folders to save screenshots under the main directory output
 
-No| Folder Name | Folder
-1 | Login | Folder
+No| Folder Name | new
+1 | Folder | new
 2 | Logout | folder
 3 | Contact | Folder
+
+Markdown | Less | Pretty
+--- | --- | ---
+*Still* | `renders` | **nicely**
+1 | 2 | 3
