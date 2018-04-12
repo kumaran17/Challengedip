@@ -1,4 +1,4 @@
-+ This file consists of few details regarding the code from the **_Repository Challengedip_**.
++ This file consists of few details regarding the code from the **Repository Challengedip**.
 
 + **Screenshots** are programmed to be saved on my `C:\Users\dhamilton\Desktop\Selenium project\output` with separate sub folders corresponding to each functionality on the website.
 
@@ -14,4 +14,4 @@
 
    `os.path.join(Login.save_dir, 'screenshotname.png')`
 
-* Each class has its own separete sub folder to save screenshot which can be seen within them. `os.path.join` joins the location path from `.save_dir` with `screenshot.png` so that the screenshot is saved in the location of `save_dir`
+* Each **class** has its own **separete sub folder to save screenshot** which can be seen within them. `os.path.join` joins the location path from `.save_dir` with `screenshot.png` so that the screenshot is saved in the location of `save_dir`
