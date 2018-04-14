@@ -20,7 +20,7 @@
 
 > Currently Selenium takes 77.61 Seconds to run 9 tests via Visual Studio Code Terminal
 
-* To **_reduce number of lines_** in the code and make it much **_faster_** to run the following lines of code has been replaced by **_While statement_**
+* To **_reduce number of lines_** in the code and to **_reduce execution time_**, the following lines of code has been replaced by **_While statement_**
 
        'element = driver.find_element_by_id('ShowAnswer').click()
         element = driver.find_element_by_id('ShowURL').click() #2
@@ -66,4 +66,4 @@
             print('screenshot location is')
             print(Cartoon_Challenge.save_dir)'
 
-* The whole statement works based on `count<8` which iterates the while loop for 9 times untill the statement becomes false, after which the else statement gets executed.
+* The whole statement works based on `count<8` which iterates the while loop for 9 times untill the statement becomes false, after which the else statement gets executed. `count +=1` iterates the loop by increasing the value of count with +1.
