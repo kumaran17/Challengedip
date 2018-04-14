@@ -20,12 +20,4 @@
 
 There are 3 separate main folders to save screenshots under the main directory output for now
 
-~~Never mind about the **_Table_** below, just created it for Fun~~
-
-No. | Folder Name | Active
---- | --- | ---
-1 | Login | Yes
-2 | Logout | Yes
-3 | Contact | Yes
-
-> Currently Selenium takes 47.2 Seconds for a complete execution of test scripts of via Visual Studio Code Terminal
+> Currently Selenium takes 77.61 Seconds for to run 9 tests via Visual Studio Code Terminal
