@@ -17,10 +17,10 @@ class Login(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Chrome()
         self.driver.maximize_window()
-        
+        self.driver.get('http://www.challengedip.com')
+               
     def test_a1(self): #wrong password for login
         driver = self.driver
-        self.driver.get('http://www.challengedip.com')
         element = driver.find_element_by_xpath("//*[@id='navbarResponsive']/ul/li[1]/a").click()
         element = driver.find_element_by_id("emailaddress")
         element.send_keys("kumarants007@gmail.com")
@@ -34,7 +34,6 @@ class Login(unittest.TestCase):
 
     def test_a2(self): #wrong email for login
         driver = self.driver
-        self.driver.get('http://www.challengedip.com')
         element = driver.find_element_by_xpath("//*[@id='navbarResponsive']/ul/li[1]/a").click()
         element = driver.find_element_by_id("emailaddress")
         element.send_keys("kumarants007@mail.com")
@@ -46,7 +45,6 @@ class Login(unittest.TestCase):
 
     def test_a3(self): #wrong email and password for login
         driver = self.driver
-        self.driver.get('http://www.challengedip.com')
         element = driver.find_element_by_xpath("//*[@id='navbarResponsive']/ul/li[1]/a").click()
         element = driver.find_element_by_id("emailaddress")
         element.send_keys("kumarants007@mail.com")
@@ -58,7 +56,6 @@ class Login(unittest.TestCase):
 
     def test_a4(self): #correct credentials for login
         driver = self.driver
-        self.driver.get('http://www.challengedip.com')
         element = driver.find_element_by_xpath("//*[@id='navbarResponsive']/ul/li[1]/a").click()
         element = driver.find_element_by_id("emailaddress")
         element.send_keys("kumarants007@gmail.com")
