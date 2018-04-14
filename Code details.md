@@ -23,31 +23,31 @@
 * To **_reduce number of lines_** in the code and to **_reduce execution time_**, the following lines of code has been replaced by **_While statement_**
 
        'element = driver.find_element_by_id('ShowAnswer').click()
-        element = driver.find_element_by_id('ShowURL').click() #2
+        element = driver.find_element_by_id('ShowURL').click()
         element = driver.find_element_by_id('next').click()
         element = driver.find_element_by_id('ShowAnswer').click()
-        element = driver.find_element_by_id('ShowURL').click() #3
+        element = driver.find_element_by_id('ShowURL').click()
         element = driver.find_element_by_id('next').click()
         element = driver.find_element_by_id('ShowAnswer').click()
-        element = driver.find_element_by_id('ShowURL').click() #4
+        element = driver.find_element_by_id('ShowURL').click()
         element = driver.find_element_by_id('next').click()
         element = driver.find_element_by_id('ShowAnswer').click()
-        element = driver.find_element_by_id('ShowURL').click() #5
+        element = driver.find_element_by_id('ShowURL').click()
         element = driver.find_element_by_id('next').click()
         element = driver.find_element_by_id('ShowAnswer').click()
-        element = driver.find_element_by_id('ShowURL').click() #6
+        element = driver.find_element_by_id('ShowURL').click()
         element = driver.find_element_by_id('next').click()
         element = driver.find_element_by_id('ShowAnswer').click()
-        element = driver.find_element_by_id('ShowURL').click() #7
+        element = driver.find_element_by_id('ShowURL').click()
         element = driver.find_element_by_id('next').click()
         element = driver.find_element_by_id('ShowAnswer').click()
-        element = driver.find_element_by_id('ShowURL').click() #8
+        element = driver.find_element_by_id('ShowURL').click()
         element = driver.find_element_by_id('next').click()
         element = driver.find_element_by_id('ShowAnswer').click()
-        element = driver.find_element_by_id('ShowURL').click() #9
+        element = driver.find_element_by_id('ShowURL').click()
         element = driver.find_element_by_id('next').click()
         element = driver.find_element_by_id('ShowAnswer').click()
-        element = driver.find_element_by_id('ShowURL').click() #10
+        element = driver.find_element_by_id('ShowURL').click()
         element = driver.find_element_by_id('next').click()'
 
 **_with_**
