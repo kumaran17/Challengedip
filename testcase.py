@@ -19,7 +19,7 @@ class Login(unittest.TestCase):
         self.driver.maximize_window()
         self.driver.get('http://www.challengedip.com')
                
-    def test_a1(self): #wrong password for login
+    def test_a1(self): #test case - login with wrong password
         driver = self.driver
         element = driver.find_element_by_xpath("//*[@id='navbarResponsive']/ul/li[1]/a").click()
         element = driver.find_element_by_id("emailaddress")
@@ -28,11 +28,11 @@ class Login(unittest.TestCase):
         element.send_keys("wrong")
         element = driver.find_element_by_id("login-submit").click()
         self.driver.save_screenshot(os.path.join(Login.save_dir, 'wrong password.png'))
+        print('test case wrong password')
         print('screenshot location is')
         print(Login.save_dir)
-        print('test case wrong password')
 
-    def test_a2(self): #wrong email for login
+    def test_a2(self): #test case - login with wrong email
         driver = self.driver
         element = driver.find_element_by_xpath("//*[@id='navbarResponsive']/ul/li[1]/a").click()
         element = driver.find_element_by_id("emailaddress")
@@ -42,8 +42,10 @@ class Login(unittest.TestCase):
         element = driver.find_element_by_id("login-submit").click()
         self.driver.save_screenshot(os.path.join(Login.save_dir, 'wrong email address.png'))
         print('test case wrong email')
+        print('screenshot location is')
+        print(Login.save_dir)
 
-    def test_a3(self): #wrong email and password for login
+    def test_a3(self): #test case - login with wrong email and password
         driver = self.driver
         element = driver.find_element_by_xpath("//*[@id='navbarResponsive']/ul/li[1]/a").click()
         element = driver.find_element_by_id("emailaddress")
@@ -53,8 +55,10 @@ class Login(unittest.TestCase):
         element = driver.find_element_by_id("login-submit").click()
         self.driver.save_screenshot(os.path.join(Login.save_dir, 'wrong emailpassword.png'))        
         print('test case wrong email and password')
+        print('screenshot location is')
+        print(Login.save_dir)
 
-    def test_a4(self): #correct credentials for login
+    def test_a4(self): # test case - login with correct credentials
         driver = self.driver
         element = driver.find_element_by_xpath("//*[@id='navbarResponsive']/ul/li[1]/a").click()
         element = driver.find_element_by_id("emailaddress")
@@ -64,6 +68,8 @@ class Login(unittest.TestCase):
         element = driver.find_element_by_id("login-submit").click()      
         self.driver.save_screenshot(os.path.join(Login.save_dir, 'correct credentials.png'))
         print('test case correct credentials')
+        print('screenshot location is')
+        print(Login.save_dir)
 
 class Logout(unittest.TestCase):
     save_dir = 'C:\\Users\\dhamilton\\Desktop\\Selenium project\\output\\logout\\'+datetime.now() .strftime("%d-%m-%Y %I-%M %p")
@@ -72,10 +78,10 @@ class Logout(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Chrome()
         self.driver.maximize_window()
-                
-    def test_b1(self): #to check logout
-        driver = self.driver
         self.driver.get('http://www.challengedip.com')
+
+    def test_b1(self): #test case for logout
+        driver = self.driver
         element = driver.find_element_by_xpath("//*[@id='navbarResponsive']/ul/li[1]/a").click()
         element = driver.find_element_by_id("emailaddress")
         element.send_keys("kumarants007@gmail.com")
@@ -85,9 +91,9 @@ class Logout(unittest.TestCase):
         self.driver.save_screenshot(os.path.join(Logout.save_dir, 'login.png'))
         element = driver.find_element_by_link_text('LOGOUT').click()
         self.driver.save_screenshot(os.path.join(Logout.save_dir, 'logout.png'))
+        print('test check logout')
         print('screenshot location is')
         print(Logout.save_dir)
-        print('test check logout')
 
 class Contact(unittest.TestCase):
     save_dir = 'C:\\Users\\dhamilton\\Desktop\\Selenium project\\output\\contact\\'+datetime.now() .strftime("%d-%m-%Y %I-%M %p")
@@ -96,10 +102,10 @@ class Contact(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Chrome()
         self.driver.maximize_window()
-
-    def test_c1(self): #to check contact page
-        driver = self.driver
         self.driver.get('http://www.challengedip.com')
+
+    def test_c1(self): #test case for contact page
+        driver = self.driver
         element = driver.find_element_by_xpath("//*[@id='navbarResponsive']/ul/li[1]/a").click()
         element = driver.find_element_by_id("emailaddress")
         element.send_keys("kumarants007@gmail.com")
@@ -116,9 +122,9 @@ class Contact(unittest.TestCase):
         self.driver.save_screenshot(os.path.join(Contact.save_dir, 'submit form.png'))
         element = driver.find_element_by_id('contact-submit').click()
         self.driver.save_screenshot(os.path.join(Contact.save_dir, 'submitted form.png'))
+        print('test case contact')
         print('screenshot location is')
         print(Contact.save_dir)
-        print('test case contact')
 
 class HomePage(unittest.TestCase):
     save_dir = 'C:\\Users\\dhamilton\\Desktop\\Selenium project\\output\\homepage\\'+datetime.now() .strftime("%d-%m-%Y %I-%M %p")
@@ -127,10 +133,10 @@ class HomePage(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Chrome()
         self.driver.maximize_window()
-        
-    def test_d1(self): #to check homepage
-        driver = self.driver
         self.driver.get('http://www.challengedip.com')
+
+    def test_d1(self): #test case for homepage
+        driver = self.driver
         element = driver.find_element_by_xpath("//*[@id='navbarResponsive']/ul/li[1]/a").click()
         element = driver.find_element_by_id("emailaddress")
         element.send_keys("kumarants007@gmail.com")
@@ -143,16 +149,131 @@ class HomePage(unittest.TestCase):
         element = driver.find_element_by_link_text("CHALLENGE DIP").click()
         self.driver.save_screenshot(os.path.join(HomePage.save_dir, "homepage after login.png"))
         element = driver.find_element_by_link_text("Start the Test").click()
-        driver.implicitly_wait(1)
+        driver.implicitly_wait(4) #seconds
         element = driver.find_element_by_link_text("Youtube Voice Challenge").click()
         element = driver.find_element_by_id("showbutton").click()
-        driver.implicitly_wait(3)
         element = driver.find_element_by_link_text("CHALLENGE DIP").click()
         element = driver.find_element_by_tag_name('h1')
         self.driver.save_screenshot(os.path.join(HomePage.save_dir, "homepage after challenge.png"))
+        print('test case homepage')
         print('screenshot location is')
         print(HomePage.save_dir)
-        print('test case homepage')
+
+class Youtube_Voice_Challenge(unittest.TestCase): # to check youtube voice challenge
+    save_dir = 'C:\\Users\\dhamilton\\Desktop\\Selenium project\\output\\youtube voice challenge\\'+datetime.now() .strftime("%d-%m-%Y %I-%M %p")
+    os.mkdir(save_dir)
+
+    def setUp(self):
+        self.driver = webdriver.Chrome()
+        self.driver.maximize_window()
+        self.driver.get('http://www.challengedip.com')
+
+    def test_e1(self): #test case for youtube voice challenge
+        driver = self.driver
+        element = driver.find_element_by_link_text('Start the Test').click()
+        self.driver.save_screenshot(os.path.join(Youtube_Voice_Challenge.save_dir, "select challenge.png"))
+        element = driver.find_element_by_link_text('Youtube Voice Challenge').click()
+        self.driver.save_screenshot(os.path.join(Youtube_Voice_Challenge.save_dir, "start here.png"))
+        element = driver.find_element_by_id('showbutton').click()
+        self.driver.save_screenshot(os.path.join(Youtube_Voice_Challenge.save_dir, "1.png"))
+        element = driver.find_element_by_id('ShowAnswer').click()
+        self.driver.save_screenshot(os.path.join(Youtube_Voice_Challenge.save_dir, "1answer.png"))
+        element = driver.find_element_by_id('ShowURL').click() #1
+        driver.implicitly_wait(4) #seconds
+        element = driver.find_element_by_id('next')
+        self.driver.save_screenshot(os.path.join(Youtube_Voice_Challenge.save_dir, "1video.png"))
+        element.click()
+        element = driver.find_element_by_id('ShowAnswer').click()
+        element = driver.find_element_by_id('ShowURL').click() #2
+        element = driver.find_element_by_id('next').click()
+        element = driver.find_element_by_id('ShowAnswer').click()
+        element = driver.find_element_by_id('ShowURL').click() #3
+        element = driver.find_element_by_id('next').click()
+        element = driver.find_element_by_id('ShowAnswer').click()
+        element = driver.find_element_by_id('ShowURL').click() #4
+        element = driver.find_element_by_id('next').click()
+        element = driver.find_element_by_id('ShowAnswer').click()
+        element = driver.find_element_by_id('ShowURL').click() #5
+        element = driver.find_element_by_id('next').click()
+        element = driver.find_element_by_id('ShowAnswer').click()
+        element = driver.find_element_by_id('ShowURL').click() #6
+        element = driver.find_element_by_id('next').click()
+        element = driver.find_element_by_id('ShowAnswer').click()
+        element = driver.find_element_by_id('ShowURL').click() #7
+        element = driver.find_element_by_id('next').click()
+        element = driver.find_element_by_id('ShowAnswer').click()
+        element = driver.find_element_by_id('ShowURL').click() #8
+        element = driver.find_element_by_id('next').click()
+        element = driver.find_element_by_id('ShowAnswer').click()
+        element = driver.find_element_by_id('ShowURL').click() #9
+        element = driver.find_element_by_id('next').click()
+        element = driver.find_element_by_id('ShowAnswer').click()
+        element = driver.find_element_by_id('ShowURL').click() #10
+        element = driver.find_element_by_id('next').click()
+        self.driver.save_screenshot(os.path.join(Youtube_Voice_Challenge.save_dir, "final.png"))
+        element = driver.find_element_by_link_text('CHALLENGE DIP').click()
+        self.driver.save_screenshot(os.path.join(Youtube_Voice_Challenge.save_dir, "homepage after youtube challenge.png"))
+        print('test case Challenge')
+        print('screenshot location is')
+        print(Youtube_Voice_Challenge.save_dir)
+
+class Cartoon_Challenge(unittest.TestCase): # to check cartoon challenge
+    save_dir = 'C:\\Users\\dhamilton\\Desktop\\Selenium project\\output\\cartoon challenge\\'+datetime.now() .strftime("%d-%m-%Y %I-%M %p")
+    os.mkdir(save_dir)
+
+    def setUp(self):
+        self.driver = webdriver.Chrome()
+        self.driver.maximize_window()
+        self.driver.get('http://www.challengedip.com')
+        
+    def test_f1(self): #test case for cartoon challenge
+        driver = self.driver
+        element = driver.find_element_by_link_text('Start the Test').click()
+        self.driver.save_screenshot(os.path.join(Cartoon_Challenge.save_dir, "select challenge.png"))
+        element = driver.find_element_by_link_text('Cartoon Challenge').click()
+        self.driver.save_screenshot(os.path.join(Cartoon_Challenge.save_dir, "start here.png"))
+        element = driver.find_element_by_id('showbutton').click()
+        self.driver.save_screenshot(os.path.join(Cartoon_Challenge.save_dir, "1.png"))
+        element = driver.find_element_by_id('ShowAnswer').click()
+        self.driver.save_screenshot(os.path.join(Cartoon_Challenge.save_dir, "1answer.png"))
+        element = driver.find_element_by_id('ShowURL').click() #1
+        driver.implicitly_wait(4) #seconds
+        element = driver.find_element_by_id('next')
+        self.driver.save_screenshot(os.path.join(Cartoon_Challenge.save_dir, "1video.png"))
+        element.click()
+        element = driver.find_element_by_id('ShowAnswer').click()
+        element = driver.find_element_by_id('ShowURL').click() #2
+        element = driver.find_element_by_id('next').click()
+        element = driver.find_element_by_id('ShowAnswer').click()
+        element = driver.find_element_by_id('ShowURL').click() #3
+        element = driver.find_element_by_id('next').click()
+        element = driver.find_element_by_id('ShowAnswer').click()
+        element = driver.find_element_by_id('ShowURL').click() #4
+        element = driver.find_element_by_id('next').click()
+        element = driver.find_element_by_id('ShowAnswer').click()
+        element = driver.find_element_by_id('ShowURL').click() #5
+        element = driver.find_element_by_id('next').click()
+        element = driver.find_element_by_id('ShowAnswer').click()
+        element = driver.find_element_by_id('ShowURL').click() #6
+        element = driver.find_element_by_id('next').click()
+        element = driver.find_element_by_id('ShowAnswer').click()
+        element = driver.find_element_by_id('ShowURL').click() #7
+        element = driver.find_element_by_id('next').click()
+        element = driver.find_element_by_id('ShowAnswer').click()
+        element = driver.find_element_by_id('ShowURL').click() #8
+        element = driver.find_element_by_id('next').click()
+        element = driver.find_element_by_id('ShowAnswer').click()
+        element = driver.find_element_by_id('ShowURL').click() #9
+        element = driver.find_element_by_id('next').click()
+        element = driver.find_element_by_id('ShowAnswer').click()
+        element = driver.find_element_by_id('ShowURL').click() #10
+        element = driver.find_element_by_id('next').click()
+        self.driver.save_screenshot(os.path.join(Cartoon_Challenge.save_dir, "final.png"))
+        element = driver.find_element_by_link_text('CHALLENGE DIP').click()
+        self.driver.save_screenshot(os.path.join(Cartoon_Challenge.save_dir, "homepage after cartoon challenge.png"))
+        print('test case Cartoon Challenge')
+        print('screenshot location is')
+        print(Cartoon_Challenge.save_dir)
 
 def tearDown(self):
         self.driver.close()
