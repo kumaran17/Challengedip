@@ -18,4 +18,4 @@
 
 * Each **_class_** has its own **_separete sub folder to save screenshot_** which can be seen within them. `os.path.join` joins the location path from `.save_dir` with `screenshot.png` file so that the screenshot is saved in the location of `save_dir`
 
-> Currently Selenium takes 77.61 Seconds for to run 9 tests via Visual Studio Code Terminal
+> Currently Selenium takes 77.61 Seconds to run 9 tests via Visual Studio Code Terminal
