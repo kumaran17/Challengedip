@@ -19,3 +19,51 @@
 * Each **_class_** has its own **_separete sub folder to save screenshot_** which can be seen within them. `os.path.join` joins the location path from `.save_dir` with `screenshot.png` file so that the screenshot is saved in the location of `save_dir`
 
 > Currently Selenium takes 77.61 Seconds to run 9 tests via Visual Studio Code Terminal
+
+* To **_reduce number of lines_** in the code and make it much **_faster_** to run the following lines of code has been replaced by **_While statement_**
+
+       'element = driver.find_element_by_id('ShowAnswer').click()
+        element = driver.find_element_by_id('ShowURL').click() #2
+        element = driver.find_element_by_id('next').click()
+        element = driver.find_element_by_id('ShowAnswer').click()
+        element = driver.find_element_by_id('ShowURL').click() #3
+        element = driver.find_element_by_id('next').click()
+        element = driver.find_element_by_id('ShowAnswer').click()
+        element = driver.find_element_by_id('ShowURL').click() #4
+        element = driver.find_element_by_id('next').click()
+        element = driver.find_element_by_id('ShowAnswer').click()
+        element = driver.find_element_by_id('ShowURL').click() #5
+        element = driver.find_element_by_id('next').click()
+        element = driver.find_element_by_id('ShowAnswer').click()
+        element = driver.find_element_by_id('ShowURL').click() #6
+        element = driver.find_element_by_id('next').click()
+        element = driver.find_element_by_id('ShowAnswer').click()
+        element = driver.find_element_by_id('ShowURL').click() #7
+        element = driver.find_element_by_id('next').click()
+        element = driver.find_element_by_id('ShowAnswer').click()
+        element = driver.find_element_by_id('ShowURL').click() #8
+        element = driver.find_element_by_id('next').click()
+        element = driver.find_element_by_id('ShowAnswer').click()
+        element = driver.find_element_by_id('ShowURL').click() #9
+        element = driver.find_element_by_id('next').click()
+        element = driver.find_element_by_id('ShowAnswer').click()
+        element = driver.find_element_by_id('ShowURL').click() #10
+        element = driver.find_element_by_id('next').click()'
+
+**_with_**
+
+        'count = 0
+        while (count<8):
+            element = driver.find_element_by_id('ShowAnswer').click()
+            element = driver.find_element_by_id('ShowURL').click()
+            element = driver.find_element_by_id('next').click()
+            count += 1
+        else:
+            self.driver.save_screenshot(os.path.join(Cartoon_Challenge.save_dir, "final.png"))
+            element = driver.find_element_by_link_text('CHALLENGE DIP').click()
+            self.driver.save_screenshot(os.path.join(Cartoon_Challenge.save_dir, "homepage after cartoon challenge.png"))
+            print('test case Cartoon Challenge')
+            print('screenshot location is')
+            print(Cartoon_Challenge.save_dir)'
+
+* The whole statement works based on `count<8` which iterates the while loop for 9 times untill the statement becomes false, after which the else statement gets executed.
